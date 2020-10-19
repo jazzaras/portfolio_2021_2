@@ -11,7 +11,7 @@ class Blog(models.Model):
 	def summery(self):
 		
 		if len(self.body) > 100:
-			return self.body[:100] + '...'
+			return self.body[:100] + ' ...'
 		elif len(self.body) <= 100:
 			return self.body
 

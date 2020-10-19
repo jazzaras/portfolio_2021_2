@@ -60,7 +60,7 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a name="myname" class="navbar-brand" href="{% url 'home' %}">Abdalaziz Jazzar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -100,7 +100,7 @@
 						<a class="nav-link" href="{% url 'resume' %}">Resume</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Blog</a>
+						<a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link active" href="{% url 'home' %}">Home</a>
@@ -116,7 +116,9 @@
 			<div class="container">
 				<h1>Hi... i am Jazzar</h1>
 				<p class="lead text-muted">i am a coder and i do not like people</p>
+				<a href="{% url 'aboutme' %}"><img class="img-fluid rounded border border-dark" height=200 width=200 src="{% static 'المز زوزو.jpg' %}"></a> 
 				<p>
+					<br>
 					<a href="mailto:jazzaras@yahoo.com" class="btn btn-primary my-2 border border-dark">Email Me</a>
 				</p>
 			</div>
@@ -130,9 +132,10 @@
 					{% for job in jobs.all %}
 					<div class="col-md-4">
 						<div class="card mb-4 shadow-sm">
+							<h3 class="text-center">{{ job.title }}</h3>
 							<img class="card-img-top" src="{{ job.image.url }}">
 							<div class="card-body">
-								<p class="card-text">{{job.summary}}</p>
+								<p class="card-text text-center">{{job.summery}}</p>
 							</div>
 						</div>
 					</div>
