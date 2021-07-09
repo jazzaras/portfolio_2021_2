@@ -17,39 +17,9 @@
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-	<style>
-      hr {
-        width: 75%;
-        height: 0.5px;
-        background-color: gray;
-      }
+  	<!-- custom css -->
+  	<link rel="stylesheet" href="{% static 'css/main.css' %}">
 
-     .fa.fa-instagram {
-  		color: transparent;
-  		background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background-clip: text;
-  		-webkit-background-clip: text;
-	  }
-
-	       .fa.fa-twitter {
-  		color: transparent;
-  		background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background-clip: text;
-  		-webkit-background-clip: text;
-	  }
-
-	       .fa.fa-whatsapp {
-  		color: transparent;
-  		background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  		background-clip: text;
-  		-webkit-background-clip: text;
-	  }
-
-
-    </style>
 
 </head>
 <body>
@@ -64,7 +34,7 @@
 				<ul  class='navbar-nav mx-auto'>
 
 
-					<li style='margin-right: 270px' class="nav-item">
+					<li style='margin-right: 300px' class="nav-item">
 					</li>
 				   <li class="nav-item">
 						 <a style=" margin-right: 40px;margin-left: 10px ;font-size: 32px;" href="https://twitter.com/JAZZZARAS" class="fa fa-twitter"></a>
@@ -86,7 +56,9 @@
 				</ul>
 
 				<ul class="navbar-nav ml-auto">
-
+					<li class="nav-item">
+						<a class="nav-link active" href="{% url 'contact' %}">Contact</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'aboutme' %}">About Me</a>
 					</li>
@@ -100,6 +72,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'home' %}">Home</a>
 					</li>
+
 				</ul>
 			</div>
 		</nav>
