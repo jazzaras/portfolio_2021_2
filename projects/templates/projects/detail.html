@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link style='' rel="icon" href="{% static 'stmylogo.jpg' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+
+	<title>Abaalziz Jazzar</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  	<!-- custom css -->
+  	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a name="myname" class="navbar-brand" href="{% url 'home' %}">Abdalaziz Jazzar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				
+				<ul  class='navbar-nav mx-auto'>
+
+
+					<li style='margin-right: 300px' class="nav-item">
+					</li>
+				   <li class="nav-item">
+						 <a style=" margin-right: 40px;margin-left: 10px ;font-size: 32px;" href="https://twitter.com/JAZZZARAS" class="fa fa-twitter"></a>
+
+					</li>
+
+
+				
+				   <li class="nav-item">
+						 <a style=" margin-right: 40px; margin-left: 10px ;font-size: 32px;" href="https://www.instagram.com/jazzaras/?hl=en" class="fa fa-instagram"></a>
+
+					</li>
+
+					<li class="nav-item">
+						 <a style=" margin-right: 40px; margin-left: 10px ;font-size: 32px;" href="https://wa.link/4xlb71" class="fa fa-whatsapp"></a>
+
+					</li>
+				
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'aboutme' %}">About Me</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'resume' %}">Resume</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{% url 'projects' %}">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'home' %}">Home</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+		<div class="container text-center">
+		
+		<h1 class="text-center pt-3">{{ project.title }}</h1>
+		<hr />
+
+		<p  class="text-center pt-2">{{ project.pup_date_p }}<p />
+		<img class="img-fluid"  height='750' width="750" src="{{project.image.url}}">
+		
+		<br />
+		<p style="text-shadow: 1px 1px gray" class="text-center">{{ project.body }}</p>
+
+		<br><br><br>
+
+		{% if project.project_file != '' %}
+
+			<a href="{{ project.project_file.url }}" download>
+
+				<button class="btn" style="width:75%"><i class="fa fa-download"></i> Download</button>
+			</a>
+		{% endif %}
+			
+		{% if project.project_link != '' %}
+			<br><br>
+		<a href="{{ project.project_link }}">
+
+			<button class="btn2" style="width:75%"><i class="fa fa-link"></i> Link</button>
+		</a>
+		{% endif %}		
+
+		<br>
+		<br>
+		<br>
+
+		</div>
+
+			
+	</main>
+
+	<footer class="text-muted">
+		<div class="container text-center">
+			<p>© Abdalaziz Jazzar {% now "Y" %}<p>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	</html>
