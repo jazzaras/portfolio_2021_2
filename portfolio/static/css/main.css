@@ -40,3 +40,35 @@ textarea {
     width: 70%;
     max-width: 600px;
 }
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.btn2 {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn2:hover {
+  background-color: darkgreen;
+}
+
+.line {
+  border: 1px solid black;
+}
